@@ -12,7 +12,7 @@
             Name:<input type="text"id="name" name="name"required><br><br>
 
             <label for="Mobile number"></label>
-            Number:<input type="tel"id="number" name="number" value=""required><br><br>
+            Number:<input type="tel"id="number" name="number" maxlength="10" placeholder="10-digit number"required><br><br>
 
             <label for="email"></label>
             email:<input type="email"id="email" name="email" value=""required><br><br>
@@ -42,6 +42,15 @@
             <option value="BA.Tamil">BA.Tamil</option>
             <option value="BA.Maths">BA.Maths</option>
             </select><br><br>
+
+             Language:
+                 <input list="languages" name="language">
+                 <datalist id="languages">
+                 <option value="English">
+                 <option value="Tamil">
+                 <option value="Hindi">
+                 </datalist><br><br>
+
 
          <input type="submit" value="Submit"><br>
           </fieldset>
