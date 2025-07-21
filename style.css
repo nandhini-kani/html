@@ -1,0 +1,45 @@
+.relative{
+    height:100px;
+    width:100px;
+    background-color:rgb(114, 45, 204);
+    bottom:70px;
+    border-radius: 50%;
+    position:relative;
+    margin-left:30px;
+    z-index: 1;
+}
+.re{
+    height:100px;
+    width:100px;
+    bottom:140px;
+    margin-left: 60px;
+    border-radius: 10%;
+    position:relative;
+    background-color:rgb(233, 54, 164);
+    z-index:0;
+}
+.circle{
+    height: 100px;
+    width:100px;
+    border:solid black 2px;
+    background-color: aquamarine;
+     margin-left: 250px;
+     position:relative;
+}
+p{
+    position: absolute;
+    left:70px;
+
+}
+h1{
+    position: sticky;
+    background-color: black;
+    color:white;
+    top:10px;
+}
+h3{
+    position:fixed;
+    background-color: rgb(13, 1, 24);
+    color:whitesmoke;
+    top:1px;
+}
