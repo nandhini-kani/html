@@ -1,155 +1,305 @@
-*{
-    margin: 0%;
-    padding:0%;
-    box-sizing: border-box;
-}
-body{
-    width:100%;
-    height:100%;
-    color: aliceblue;
-    background-color: black;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
- 
-.container::before{
-    content: "";
-    height: 100%;
-    width:100%;
-    background-image: url("netflix-background.jpeg");
-    position: absolute;
-    opacity:0.3;
-    z-index:-1;
+body {
+  width: 100%;
+  height: 100%;
+  color: aliceblue;
+  background-color: black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.container.novbar{
-   height:100px;
-   display: contents;
+
+
+.container::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-image: url("netflix-background.jpeg");
+  position: absolute;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+
+.container.navbar {
+  height: 100px;
+  display: flex;
+
+  align-items: center;
+  padding: 0 50px;
+  flex-wrap: wrap;
 }
 
 .container .navbar .left {
-    height:50px;
-    display:flex;
-    float:left;
+  display: flex;
+  align-items: center;
 }
-.container .navbar .left img{
-    height:50px;
-    position: absolute;
-    top:20px;
-    left:100px;
+
+.container .navbar .left img {
+  height: 50px;
+  left:50px;
+  position: absolute;
+  top:10px;
+  
+}
+
+.container .navbar .right {
+  display: flex;
+  float: right;
+  right:120px;
+  position:absolute;
+  top:40px;
+  align-items: center;
+  gap: 15px;
+}
+
+.container .navbar .right .language {
+  font-size: 18px;
+  
+  padding: 7px 10px;
+  color: white;
+  background: none;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.container .navbar .right .language option {
+  background-color: gray;
+}
+
+.container .navbar .right button {
+  font-size: 18px;
+  padding: 7px 17px;
+  font-weight: 400;
+  background: #e50914;
+  cursor: pointer;
+  outline: none;
+  border-radius: 4px;
+  border: none;
+}
+
+.container .navbar .right button a {
+  text-decoration: none;
+  color: white;
+}
+
+
+.container .title {
+  padding: 80px 45px;
+}
+
+.container .title .content {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 75px 0;
+  text-align: center;
+}
+
+.container .title .content h1 {
+  max-width: 559px;
+  margin: auto;
+  font-weight: 600;
+  font-size: 3.9rem;
+  padding: 10px;
+}
+
+.container .title .content h2 {
+  max-width: 650px;
+  margin: auto;
+  font-weight: 200;
+  padding: 5px;
+  font-size: 1.6rem;
+}
+
+.container .title .content form h4 {
+  margin: 1rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding: 10px;
+  font-size: 1.1rem;
+  font-weight: 100;
+  font-family: "Poppins", sans-serif;
+  
+}
+
+.container .title .content form .email {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.container .title .content form .email input {
+  height: 60px;
+  width: 450px;
+  padding: 7px 17px;
+  background: none;
+  border: 1px solid whitesmoke;
+  border-radius: 5px;
+  font-size: 20px;
+  outline: none;
+}
+
+.container .title .content form .email button {
+  height: 60px;
+  width: 180px;
+  font-size: 20px;
+  background: #e50914;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.container .title .content form .email button a {
+  text-decoration: none;
+  color: white;
+}
+.container .title .content form .email button:hover  {
+    background-color: black;
+    border:4px solid #e50914;
     
 }
-.container .navbar .right{
-    display:flex;
-    height:100px;
-    float:right;
-    position: absolute;
-    right:120px;
+.container .title .content form .email input:hover{
+    background-color: black;
+    color: rgb(220, 228, 235);
+    border:2px solid rgb(207, 19, 44)
+}
+
+/* 2560px - Large 2K Monitors */
+@media screen and (min-width: 2560px) {
+  .container .title .content h1 {
+    font-size: 5rem;
+  }
+  .container .title .content h2 {
+    font-size: 2.2rem;
+  }
+  .container .title .content form .email input {
+    width: 600px;
+    font-size: 24px;
+  }
+  .container .title .content form .email button {
+    width: 240px;
+    font-size: 24px;
+  }
+  .container .navbar {
+    padding: 30px 150px;
+  }
+  .container .navbar .right .language,
+  .container .navbar .right button {
+    font-size: 22px;
+    padding: 12px 24px;
+  }
+}
+
+/* 1440px - Large Desktops / Laptops */
+@media screen and (min-width: 1440px) {
+  .container .title .content h1 {
+    font-size: 4.2rem;
+  }
+  .container .title .content h2 {
+    font-size: 1.9rem;
+  }
+  .container .title .content form .email {
+    max-width: 1200px;
+  }
+  .container .title .content form .email input {
+    width: 500px;
+  }
+  .container .title .content form .email button {
+    width: 200px;
+    font-size: 22px;
+  }
+}
+
+/* 1024px - Small Laptops */
+@media screen and (max-width: 1024px) {
+  .container .title .content h1 {
+    font-size: 2.5rem;
+  }
+  .container .title .content h2 {
+    font-size: 1.2rem;
+  }
+  .container .navbar {
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+  }
+}
+
+/* 768px - Tablets */
+@media screen and (max-width: 768px) {
+  .container .title {
+    padding: 60px 20px;
+  }
+  .container .title .content h1 {
+    font-size: 2rem;
+  }
+  .container .title .content h2 {
+    font-size: 1rem;
+  }
+  .container .title .content form .email input,
+  .container .title .content form .email button {
+    width: 200;
+    height: 50px;
+  }
+  .container .navbar .right {
+    flex-direction: column;
+    align-items: center;
+  }
+
+/* 425px - Large Phones */
+@media screen and (max-width: 425px) {
+  .container .title .content h1 {
+    font-size: 1.8rem;
+  }
+  .container .title .content h2 {
+    font-size: 1rem;
+  }
+  .container .title .content form h4 {
+    font-size: 1rem;
+  }
+  .container .title .content form .email input,
+  .container .title .content form .email button {
+    width: 200;
+    height: 50px;;
 }
 .container .navbar .right .language{
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    padding:7px 10px;
-    color:white;
-    background: none;
-    cursor:pointer;
-    font-weight:400;
-    margin-right: 15px;
+    padding: 5px;
+    margin-top: 18px;
 }
-.container .navbar .right .language option{
-    background-color: gray;
-}
-.container .navbar .right  button{
-    margin:auto;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    padding:7px 10px;
-    font-weight:400;
-    padding:7px 17px;
-    background: #e50914;
-    cursor:pointer;
-    outline:none;
-    border-radius: 4px;
-    border:none;
-}
-.container .navbar .right  button a{
-    text-decoration: none;
-    color:white;
-}
-.container .title{
-    padding:80px 45px;
-}
-.container .title .content{
-    width: 1200px;
-    margin: auto;
-    padding:75px 0;
-    text-align: center;
-}
-.container .title .content h1{
-    width: 559px;
-    margin: auto;
-    font-weight: 600;
-    font-size: 3.9rem;
-    text-align: center;
-    padding:10px;
-}
-.container .title .content h2{
-     width: 650px;
-    margin: auto;
-    font-weight: 200;
-    padding:5px;
-    font-size: 1.6rem;
-    text-align: center;
-}
-.container .title .content form h4{
-     margin:1rem;
-     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-     padding: 10px;
-    font-size: 1.1rem;
-    font-weight: 100;
-    text-align: center;
-}
-.container .title .content form .email{
-    width: 1000px;
-    margin: auto;
-}
-.container .title .content form .email input{
-    height:60px;
-    width: 450px;
-    margin: auto;
-    padding:7px 17px ;
-    border-color:whitesmoke;
-    background: none;
-    margin: 10px;
-    border-radius:5px;;
-    font-size: 20px;
-    outline: none;
 
+/* 375px - Medium Phones */
+@media screen and (max-width: 375px) {
+  .container .title .content h1 {
+    font-size: 1.6rem;
+  }
+  .container .title .content h2 {
+    font-size: 0.95rem;
+  }
+  .container .title .content form h4 {
+    font-size: 0.95rem;
+  }
 }
-.container .title .content form .email button{
-    margin: auto;
-    height:60px;
-    width: 180px;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    padding: 7px 17px;
-    background:#e50914;
-    cursor: pointer;
-    outline:none;
-    border-radius: 5px;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 2px;
-    border:none;
-    padding:5px;
-    margin-left: -5px;
-}
-.container .title .content form .email button:hover{
-     background-color: #e50914;
-}
-.container .title .content form .email button a{
-    text-decoration: none;
-    color:white;
+
+/* 320px - Small Phones */
+@media screen and (max-width: 320px) {
+  .container .title .content h1 {
+    font-size: 1.4rem;
+  }
+  .container .title .content h2 {
+    font-size: 0.9rem;
+  }
+  .container .title .content form h4 {
+    font-size: 0.85rem;
+  }
+  .container .navbar .right .language,
+  .container .navbar .right button {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
 }
